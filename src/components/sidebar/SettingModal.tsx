@@ -2,14 +2,10 @@ import Modal from "../Modal";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";
 import {
-  HiOutlinePencilSquare,
-  HiArrowUpTray,
   HiOutlineViewfinderCircle,
 } from "react-icons/hi2";
-import {toast} from 'react-hot-toast'
 import Input from "../ui/Input";
 import Button from "../ui/Button";
-import { IUser } from "../../interfaces/user";
 
 interface SettingModalProps {
   currentUser: any;
@@ -22,12 +18,10 @@ const SettingModal: React.FC<SettingModalProps> = ({
   isOpen,
   onClose,
 }) => {
-  const router = window.location;
   const [isLoading, setIsLoading] = useState(false);
   const {
     register,
     handleSubmit,
-    setValue,
     watch,
     formState: { errors },
   } = useForm<FieldValues>({
@@ -39,14 +33,9 @@ const SettingModal: React.FC<SettingModalProps> = ({
 
   const image = watch('image');
 
-  const handleUpload = (result:any) => {
-    setValue('image', result.info.secure_url, {
-        shouldValidate: true
-    })
-  }
 
-  const onSubmit: SubmitHandler<FieldValues> = (data) => {
-
+  const onSubmit: SubmitHandler<FieldValues> = () => {
+    setIsLoading(true)
   }
 
   return (

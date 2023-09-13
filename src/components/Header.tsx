@@ -1,14 +1,12 @@
 import { FC, useState } from "react";
 import { HiBars3CenterLeft } from "react-icons/hi2";
 import MobileNav from "./sidebar/MobileNav";
-import useRoutes from "../hooks/useRoutes";
 
 interface HeaderProps {
   title: string;
 }
 
 const Header: FC<HeaderProps> = ({ title }) => {
-  const routes = useRoutes();
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>

@@ -1,13 +1,12 @@
 import { FieldValues, SubmitErrorHandler, useForm } from "react-hook-form";
 import { HiOutlinePaperAirplane } from "react-icons/hi";
-import { HiOutlinePaperClip, HiPaperAirplane } from "react-icons/hi2";
+import { HiOutlinePaperClip } from "react-icons/hi2";
 import MessageInput from "./MessageInput";
 
 const Form = () => {
   const {
     register,
     handleSubmit,
-    setValue,
     formState: { errors },
   } = useForm<FieldValues>({
     defaultValues: {
@@ -15,9 +14,7 @@ const Form = () => {
     },
   });
 
-  const onSubmit: SubmitErrorHandler<FieldValues> = (data) => {};
-
-  const handleUpload = (result: any) => {};
+  const onSubmit: SubmitErrorHandler<FieldValues> = () => {};
 
   return (
     <div
