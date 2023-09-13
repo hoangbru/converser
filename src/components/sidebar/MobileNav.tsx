@@ -1,10 +1,9 @@
 import { Transition, Dialog } from "@headlessui/react";
 import React, { Fragment, useState } from "react";
-import { HiArrowLeftOnRectangle, HiMinus } from "react-icons/hi2";
+import { HiArrowLeftOnRectangle } from "react-icons/hi2";
 import { signOut } from "firebase/auth";
 import SettingModal from "./SettingModal";
 import { auth } from "../../config/firebase";
-import { Link } from "react-router-dom";
 import DesktopItem from "./DesktopItem";
 import Avatar from "../Avatar";
 import toast from "react-hot-toast";
