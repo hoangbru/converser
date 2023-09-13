@@ -7,6 +7,7 @@ import { signInWithPopup } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 import { FcGoogle } from "react-icons/fc";
+import { BiLogoFacebookCircle} from "react-icons/bi"
 import { useEffect } from "react";
 
 const Signin = () => {
@@ -38,18 +39,18 @@ const Signin = () => {
         px-12
         sm:px-6
         lg:px-8
-        bg-gray-100
+        bg-transparent
       "
     >
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <img
-          src="/images/logo.png"
+          src="/images/logo-light.png"
           alt="logo converser"
           className="mx-auto w-40 h-auto"
         />
       </div>
       <div>
-        <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+        <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-200">
           Welcome to converser
         </h2>
         <div
@@ -100,8 +101,9 @@ const Signin = () => {
                   </span>
                 </div>
               </div>
-              <div className="mt-6 flex gap-2">
+              <div className="mt-6 flex flex-col gap-2">
                 <AuthSocialButton icon={FcGoogle} onClick={socialAction} />
+                <AuthSocialButton icon={BiLogoFacebookCircle} onClick={socialAction} />
               </div>
             </div>
             <div
@@ -115,7 +117,7 @@ const Signin = () => {
                 text-gray-500
               "
             >
-              <div>Converser help you connect with friends</div>
+              <div>Converser connect with your friends</div>
             </div>
           </div>
         </div>

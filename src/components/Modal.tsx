@@ -11,7 +11,7 @@ interface ModalProps {
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
   return (
     <Transition.Root show={isOpen} as={Fragment}>
-      <Dialog as="div" className="relative z-50" onClose={onClose}>
+      <Dialog as="div" className="relative z-5" onClose={onClose}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -54,49 +54,49 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
             >
               <Dialog.Panel
                 className="
-                        relative 
-                        transform 
-                        overflow-hidden 
-                        rounded-lg 
-                        bg-white 
-                        px-4 
-                        pb-4
-                        pt-5 
-                        text-left 
-                        shadow-xl 
-                        transition-all
-                        w-full
-                        sm:my-8 
-                        sm:w-full 
-                        sm:max-w-lg 
-                        sm:p-6
-                      "
+                  relative 
+                  transform 
+                  overflow-hidden 
+                  rounded-lg 
+                  bg-white 
+                  px-4 
+                  pb-4
+                  pt-5 
+                  text-left 
+                  shadow-xl 
+                  transition-all
+                  w-full
+                  sm:my-8 
+                  sm:w-full 
+                  sm:max-w-lg 
+                  sm:p-6
+                "
               >
                 <div
                   className="
-                            absolute 
-                            right-0 
-                            top-0 
-                            hidden 
-                            pr-4 
-                            pt-4 
-                            sm:block
-                            z-10
-                          "
+                    absolute 
+                    right-0 
+                    top-0 
+                    hidden 
+                    pr-4 
+                    pt-4 
+                    sm:block
+                    z-10
+                  "
                 >
                   <button
                     type="button"
                     className="
-                                  rounded-md 
-                                  bg-white 
-                                  text-black
-                                  hover:text-gray-500 
-                                  focus:outline-none 
-                                "
+                      rounded-md 
+                      bg-white 
+                      text-black
+                      hover:text-gray-500 
+                      focus:outline-none 
+                    "
                     onClick={onClose}
                   >
                     <span className="sr-only">Close</span>
-                    <HiMinus size={25} aria-hidden="true" />
+                    <HiMinus size={25} aria-hidden="true" className="hover:text-indigo-500 transition"/>
                   </button>
                 </div>
                 {children}

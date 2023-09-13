@@ -12,7 +12,7 @@ import Button from "../ui/Button";
 import { IUser } from "../../interfaces/user";
 
 interface SettingModalProps {
-  currentUser: IUser;
+  currentUser: any;
   isOpen?: boolean;
   onClose: () => void;
 }
@@ -56,11 +56,11 @@ const SettingModal: React.FC<SettingModalProps> = ({
           <div className="border-b border-gray-900/10 pb-12">
             <h2
               className="
-                  text-base 
-                  font-semibold 
-                  leading-7 
-                  text-gray-900
-                "
+                text-base 
+                font-semibold 
+                leading-7 
+                text-gray-900
+              "
             >
               Profile
             </h2>

@@ -7,6 +7,7 @@ import LayoutSite from "./layouts";
 import Friend from "./pages/Friend";
 import { auth } from "./config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import ConversationDetail from "./pages/ConversationDetail";
 
 const RedirectRoute = () => {
   const [user] = useAuthState(auth);
@@ -23,7 +24,11 @@ export const routers = createBrowserRouter([
     children: [
       { index: true, element: <Navigate to="dashboard" /> },
       { path: "dashboard", element: <Dashboard /> },
-      { path: "conversations", element: <Conversation /> },
+      {
+        path: "conversations",
+        element: <Conversation />,
+      },
+      { path: "conversations/:id", element: <ConversationDetail /> },
       { path: "friends", element: <Friend /> },
     ],
   },

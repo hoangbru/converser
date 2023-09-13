@@ -1,8 +1,13 @@
+import Header from "../components/Header";
 
 const Friend = () => {
   return (
-    <div>Friend</div>
-  )
-}
+    <div>
+      <div className="h-full">
+        <Header title="Friends" />
+      </div>
+    </div>
+  );
+};
 
-export default Friend
+export default Friend;
